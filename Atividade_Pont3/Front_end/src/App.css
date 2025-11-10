@@ -1,0 +1,119 @@
+
+
+
+:root {
+  --primary: #0d6b3f;
+  --secondary: #e6f4ea;
+  --text-dark: #222;
+  --text-light: #555;
+  --bg: #f9f9f9;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em );
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em);
+}
+
+
+/* ----- LAYOUT GERAL ----- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-dark);
+}
+
+main {
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* ----- CONTAINER GERAL ----- */
+div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ----- HEADER ----- */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  width: 100%;
+  background-color: var(--secondary);
+  padding: 1.5rem 0;
+  text-align: center;
+  border-top: 2px solid var(--primary);
+}
+
+footer img {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.05);
+}
+
+/* ----- RESPONSIVIDADE ----- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav a {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  footer img {
+    width: 100px;
+  }
+}

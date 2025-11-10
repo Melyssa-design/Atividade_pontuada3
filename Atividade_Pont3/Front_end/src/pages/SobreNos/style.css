@@ -1,0 +1,79 @@
+/* Front_end\src\pages\SobreNos\style.css */
+
+:root {
+  --primary: #0d6b3f;
+  --secondary: #e6f4ea;
+  --text-dark: #222;
+  --text-light: #555;
+  --bg-light: #f9f9f9;
+  --radius: 12px;
+}
+
+/* ---------- SEÇÃO SOBRE NÓS ---------- */
+.sobre {
+  padding: 4rem 2rem;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+
+.sobre h1 {
+  font-size: 2.3rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+/* ---------- LISTA DE DESTAQUES ---------- */
+.sobre ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.sobre ul li {
+  background: #fff;
+  padding: 1rem 1.25rem;
+  border-left: 6px solid var(--primary);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sobre ul li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  .sobre {
+    padding: 3rem 1.5rem;
+  }
+
+  .sobre h1 {
+    font-size: 2rem;
+  }
+
+  .sobre p {
+    font-size: 1rem;
+  }
+
+  .sobre ul li {
+    font-size: 0.95rem;
+  }
+}

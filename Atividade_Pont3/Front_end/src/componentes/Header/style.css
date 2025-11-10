@@ -1,0 +1,76 @@
+/*Front_end\src\componentes\Header\style.css  */
+
+.header {
+    background-color: #0a7c59; /* mesmo tom de verde do footer */
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Marca e logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.brand img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.link:hover {
+    color: #d2f5e5;
+    border-bottom: 2px solid #d2f5e5;
+}
+
+.link.active {
+    color: #ffe27a; /* destaque para a rota ativa */
+    border-bottom: 2px solid #ffe27a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header__wrap {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,109 @@
+.contato {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+}
+
+.contato h1 {
+  font-size: 2.2rem;
+  color: #064e3b; /* Verde escuro elegante */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contato p {
+  text-align: center;
+  color: #7c7c7c;
+  margin-bottom: 40px;
+}
+
+/* ======== Grid de campos ======== */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.cols-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ======== Campos ======== */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field span {
+  font-weight: 600;
+  color: #064e3b;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fafafa;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #198754; /* Verde médio */
+  box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.15);
+}
+
+/* ======== Botão ======== */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 26px;
+  margin-top: 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #198754, #bfa005); /* Verde + dourado */
+  color: white;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.3);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(135deg, #146c43, #a58900);
+  box-shadow: 0 6px 14px rgba(25, 135, 84, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ======== Efeito de foco nos inputs ======== */
+.field input:focus,
+.field textarea:focus {
+  border-color: #bfa005;
+  box-shadow: 0 0 0 3px rgba(191, 160, 5, 0.15);
+}
+
+/* ======== Responsividade ======== */
+@media (max-width: 600px) {
+  .contato {
+    padding: 30px 20px;
+  }
+
+  .contato h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

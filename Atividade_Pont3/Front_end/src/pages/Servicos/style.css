@@ -1,0 +1,84 @@
+/* Front_end\src\pages\Servicos\style.css */
+
+:root {
+  --primary: #0d6b3f;
+  --secondary: #e6f4ea;
+  --text-dark: #222;
+  --text-light: #555;
+  --bg-light: #f9f9f9;
+  --radius: 12px;
+}
+
+/* ---------- SEÇÃO DE SERVIÇOS ---------- */
+.servicos {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.servicos h1 {
+  font-size: 2.3rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.servicos p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- GRID DE SERVIÇOS ---------- */
+.grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background: var(--secondary);
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  background: #dff7e6;
+}
+
+.card h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  .servicos {
+    padding: 3rem 1.5rem;
+  }
+
+  .servicos h1 {
+    font-size: 2rem;
+  }
+
+  .grid.cols-3 {
+    gap: 1.25rem;
+  }
+
+  .card {
+    text-align: center;
+  }
+}
